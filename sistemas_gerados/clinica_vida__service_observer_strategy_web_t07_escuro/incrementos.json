@@ -1,0 +1,14 @@
+[
+  {
+    "classe": "Consulta",
+    "campo": "cpf_paciente",
+    "acao": "novo",
+    "regra": "cpf"
+  },
+  {
+    "classe": "Consulta",
+    "campo": "telefone_contato",
+    "acao": "novo",
+    "regra": "telefone"
+  }
+]

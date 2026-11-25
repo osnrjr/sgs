@@ -1,0 +1,58 @@
+[
+  {
+    "app": "compradores",
+    "pacote": "apps.compradores",
+    "caminho": "apps/compradores",
+    "entidade": "Comprador",
+    "assunto": "compradores com nome e email",
+    "dominio": "generico",
+    "padroes": [
+      "encapsulamento",
+      "strategy"
+    ],
+    "campos": [
+      "cliente",
+      "codigo",
+      "quantidade",
+      "valor_unitario",
+      "observacao"
+    ],
+    "atributos": [
+      {
+        "nome": "cliente",
+        "tipo": "str",
+        "regra": "obrigatorio",
+        "min": null,
+        "max": null
+      },
+      {
+        "nome": "codigo",
+        "tipo": "int",
+        "regra": "minimo",
+        "min": 1,
+        "max": null
+      },
+      {
+        "nome": "quantidade",
+        "tipo": "int",
+        "regra": "faixa",
+        "min": 1,
+        "max": 100
+      },
+      {
+        "nome": "valor_unitario",
+        "tipo": "float",
+        "regra": "minimo",
+        "min": 0,
+        "max": null
+      },
+      {
+        "nome": "observacao",
+        "tipo": "str",
+        "regra": "livre",
+        "min": null,
+        "max": null
+      }
+    ]
+  }
+]

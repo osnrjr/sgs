@@ -1,0 +1,59 @@
+[
+  {
+    "app": "saloes",
+    "pacote": "apps.saloes",
+    "caminho": "apps/saloes",
+    "entidade": "Salao",
+    "assunto": "saloes do restaurante com nome e capacidade",
+    "dominio": "restaurante",
+    "padroes": [
+      "encapsulamento",
+      "state",
+      "strategy"
+    ],
+    "campos": [
+      "cliente",
+      "mesa",
+      "pratos",
+      "preco_prato",
+      "observacao"
+    ],
+    "atributos": [
+      {
+        "nome": "cliente",
+        "tipo": "str",
+        "regra": "obrigatorio",
+        "min": null,
+        "max": null
+      },
+      {
+        "nome": "mesa",
+        "tipo": "int",
+        "regra": "minimo",
+        "min": 1,
+        "max": null
+      },
+      {
+        "nome": "pratos",
+        "tipo": "int",
+        "regra": "faixa",
+        "min": 1,
+        "max": 20
+      },
+      {
+        "nome": "preco_prato",
+        "tipo": "float",
+        "regra": "minimo",
+        "min": 0,
+        "max": null
+      },
+      {
+        "nome": "observacao",
+        "tipo": "str",
+        "regra": "livre",
+        "min": null,
+        "max": null
+      }
+    ]
+  }
+]

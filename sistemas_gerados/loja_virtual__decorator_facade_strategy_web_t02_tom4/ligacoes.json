@@ -1,0 +1,7 @@
+[
+  {
+    "origem": "Pedido",
+    "campo": "comprador",
+    "alvo": "Comprador"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "classe": "Turma",
+    "campo": "portal_url",
+    "acao": "novo",
+    "regra": "url"
+  },
+  {
+    "classe": "Turma",
+    "campo": "comprovante",
+    "acao": "novo",
+    "regra": "arquivo"
+  }
+]

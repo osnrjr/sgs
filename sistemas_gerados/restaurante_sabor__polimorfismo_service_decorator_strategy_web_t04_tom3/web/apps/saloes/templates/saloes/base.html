@@ -1,0 +1,36 @@
+{% load static %}<!doctype html>
+<html lang="pt-br" data-bs-theme="light" data-raio="arredondado" data-sombra="marcada" data-movimento="expressivo" data-tipografia="arredondada" data-acessivel="nao">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#B31757">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="{% static 'saloes/icone-192.png' %}">
+  <link rel="stylesheet" href="{% static 'saloes/vendor/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'saloes/css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'saloes/css/tema.css' %}">
+  <title>{% block title %}Restaurante Sabor{% endblock %}</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand navbar-sgs">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'saloes:lista' %}">Restaurante Sabor</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="{% url 'saloes:lista' %}">Lista</a>
+        <a class="nav-link" href="{% url 'saloes:criar' %}">Cadastrar</a>
+        <a class="nav-link" href="{% url 'saloes:api' %}">API</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container py-4">
+    <h1 class="h3 mb-1">{% block page_title %}Restaurante Sabor{% endblock %}</h1>
+    {% block page_subtitle %}{% endblock %}
+
+    {% block toolbar_actions %}{% endblock %}
+    {% block content %}{% endblock %}
+  </main>
+  <script src="{% static 'saloes/vendor/bootstrap/bootstrap.bundle.min.js' %}" defer></script>
+  <script src="{% static 'saloes/js/app.js' %}" defer></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

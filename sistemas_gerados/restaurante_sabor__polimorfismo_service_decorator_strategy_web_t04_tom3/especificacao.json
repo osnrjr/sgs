@@ -1,0 +1,185 @@
+{
+  "atributos": [
+    {
+      "max": null,
+      "min": null,
+      "nome": "cliente",
+      "regra": "obrigatorio",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": 1,
+      "nome": "mesa",
+      "regra": "minimo",
+      "tipo": "int"
+    },
+    {
+      "max": 20,
+      "min": 1,
+      "nome": "pratos",
+      "regra": "faixa",
+      "tipo": "int"
+    },
+    {
+      "max": null,
+      "min": 0,
+      "nome": "preco_prato",
+      "regra": "minimo",
+      "tipo": "float"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "horario_pedido",
+      "padrao": "2026-01-10T09:30",
+      "regra": "obrigatorio",
+      "tipo": "data_hora"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "observacao",
+      "regra": "livre",
+      "tipo": "str"
+    }
+  ],
+  "categorias": {
+    "base": [
+      "PratoExecutivo",
+      "Prato executivo",
+      42.0
+    ],
+    "nova": [
+      "Salada",
+      "Salada",
+      38.0
+    ],
+    "subtipos": [
+      [
+        "PratoChef",
+        "Prato do chef",
+        95.0
+      ],
+      [
+        "Massa",
+        "Massa",
+        58.0
+      ]
+    ],
+    "unidade": "prato"
+  },
+  "comentarios": true,
+  "django": true,
+  "entidade": "Comanda",
+  "estudo": true,
+  "extras": {
+    "fixos": [
+      [
+        "Couvert",
+        12.0,
+        "couvert"
+      ],
+      [
+        "Sobremesa",
+        22.0,
+        "sobremesa"
+      ],
+      [
+        "TacaVinho",
+        80.0,
+        "taça de vinho"
+      ]
+    ],
+    "percentual": [
+      "TaxaServico",
+      1.1,
+      "+10% serviço"
+    ]
+  },
+  "gateway": "PagaMesa",
+  "ident": "cliente",
+  "nomes": [
+    "Márcio",
+    "Natália",
+    "Otávio",
+    "Priscila"
+  ],
+  "padroes": [
+    "encapsulamento",
+    "polimorfismo",
+    "service",
+    "decorator",
+    "strategy"
+  ],
+  "painel": {
+    "acao_livre": "Sentar",
+    "acao_ocupado": "(aguardar)",
+    "contagem": "mesa(s) livre(s)",
+    "livre": "livre",
+    "ocupado": "OCUPADA",
+    "titulo": "Mesa",
+    "zero": "LOTADO - nenhuma mesa livre"
+  },
+  "preco": "preco_prato",
+  "precos_exemplo": [
+    58.0,
+    42.0,
+    95.0,
+    0.0
+  ],
+  "quantidade": "pratos",
+  "recurso": "mesa",
+  "recursos": [
+    1,
+    2,
+    3
+  ],
+  "sistema": "Restaurante Sabor",
+  "unidade": "prato(s)",
+  "variantes": {
+    "conceito": "tipo de cliente",
+    "itens": [
+      [
+        "Comum",
+        1.0
+      ],
+      [
+        "Fidelidade",
+        0.9
+      ],
+      [
+        "Empresa",
+        0.85
+      ]
+    ],
+    "nova": [
+      "Aniversariante",
+      0.8
+    ]
+  },
+  "web": {
+    "antibot": false,
+    "anymail": false,
+    "argon2": false,
+    "banco": "postgresql",
+    "comentarios_web": false,
+    "estilo": "web",
+    "estrutura": "apps",
+    "fernet": false,
+    "id_interno": false,
+    "id_publico": "inteiro",
+    "lnnl_tipo": "21",
+    "paleta": "P02",
+    "ratelimit": false,
+    "rbac": false,
+    "recuperacao_senha": false,
+    "redis": false,
+    "seguranca": "basica",
+    "tema": "T04",
+    "tinymce": false,
+    "tom": "tom3",
+    "two_factor": false,
+    "two_factor_expiracao": 10
+  }
+}

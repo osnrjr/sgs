@@ -1,0 +1,20 @@
+{% extends "comandas/base.html" %}
+{% block title %}{{ item.titulo }} — Restaurante Sabor{% endblock %}
+{% block page_title %}{{ item.titulo }}{% endblock %}
+{% block content %}
+
+<div class="card"><div class="card-body">
+  <dl class="row mb-0">
+  {% for rotulo, valor in item.campos %}
+    <dt class="col-sm-4">{{ rotulo }}</dt><dd class="col-sm-8">{{ valor }}</dd>
+  {% endfor %}
+    <dt class="col-sm-4">Valor final</dt>
+    <dd class="col-sm-8">{{ item.valor_formatado }} <span class="badge badge-destaque">{{ item.selo }}</span></dd>
+  </dl>
+</div></div>
+<p class="d-flex gap-2 my-3">
+  <a class="btn btn-primary" href="{% url 'comandas:editar' item.id %}">Editar</a>
+  <a class="btn btn-outline-danger" href="{% url 'comandas:excluir' item.id %}">Excluir</a>
+  <a class="btn btn-outline-primary" href="{% url 'comandas:lista' %}">Voltar</a>
+</p>
+{% endblock %}

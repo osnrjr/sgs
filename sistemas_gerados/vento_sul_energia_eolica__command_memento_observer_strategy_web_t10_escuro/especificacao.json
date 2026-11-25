@@ -1,0 +1,193 @@
+{
+  "atributos": [
+    {
+      "max": null,
+      "min": null,
+      "nome": "operador",
+      "regra": "obrigatorio",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": 1,
+      "nome": "torre",
+      "regra": "minimo",
+      "tipo": "int"
+    },
+    {
+      "max": 50,
+      "min": 1,
+      "nome": "megawatts",
+      "regra": "faixa",
+      "tipo": "int"
+    },
+    {
+      "max": null,
+      "min": 0,
+      "nome": "preco_mwh",
+      "regra": "minimo",
+      "tipo": "float"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "geoloc",
+      "padrao": "-23.5505,-46.6333",
+      "regra": "geolocalizacao",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "parametros_json",
+      "padrao": {},
+      "regra": "obrigatorio",
+      "tipo": "json"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "observacao",
+      "regra": "livre",
+      "tipo": "str"
+    }
+  ],
+  "categorias": {
+    "base": [
+      "ParqueAerogeradorBasico",
+      "ParqueAerogerador básico",
+      100.0
+    ],
+    "nova": [
+      "ParqueAerogeradorEspecial",
+      "ParqueAerogerador especial",
+      240.0
+    ],
+    "subtipos": [
+      [
+        "ParqueAerogeradorPadrao",
+        "ParqueAerogerador padrão",
+        180.0
+      ],
+      [
+        "ParqueAerogeradorAvancado",
+        "ParqueAerogerador avançado",
+        320.0
+      ]
+    ],
+    "unidade": "MW"
+  },
+  "comentarios": true,
+  "django": true,
+  "entidade": "ParqueAerogerador",
+  "estudo": true,
+  "extras": {
+    "fixos": [
+      [
+        "VisitaTecnica",
+        120.0,
+        "visita tecnica"
+      ],
+      [
+        "LaudoArt",
+        250.0,
+        "laudo tecnico"
+      ],
+      [
+        "MaterialApoio",
+        180.0,
+        "material de apoio"
+      ]
+    ],
+    "percentual": [
+      "PlantaoFimSemana",
+      1.25,
+      "+25% fim de semana"
+    ]
+  },
+  "gateway": "PagaParqueAerogerador",
+  "ident": "operador",
+  "nomes": [
+    "Ana",
+    "Bruno",
+    "Carla",
+    "Diego"
+  ],
+  "padroes": [
+    "encapsulamento",
+    "command",
+    "memento",
+    "observer",
+    "strategy"
+  ],
+  "painel": {
+    "acao_livre": "Registrar",
+    "acao_ocupado": "(em uso)",
+    "contagem": "torre(s) disponível(is)",
+    "livre": "disponível",
+    "ocupado": "EM USO",
+    "titulo": "Torre",
+    "zero": "LOTADO - nenhum(a) torre disponível"
+  },
+  "preco": "preco_mwh",
+  "precos_exemplo": [
+    220.0,
+    140.0,
+    450.0,
+    0.0
+  ],
+  "quantidade": "megawatts",
+  "recurso": "torre",
+  "recursos": [
+    1,
+    2,
+    3
+  ],
+  "sistema": "Vento Sul Energia Eólica",
+  "unidade": "MW",
+  "variantes": {
+    "conceito": "tipo de contrato",
+    "itens": [
+      [
+        "Padrao",
+        1.0
+      ],
+      [
+        "Corporativo",
+        0.9
+      ],
+      [
+        "Recorrente",
+        0.85
+      ]
+    ],
+    "nova": [
+      "Emergencial",
+      1.3
+    ]
+  },
+  "web": {
+    "antibot": false,
+    "anymail": false,
+    "argon2": false,
+    "banco": "mongodb",
+    "comentarios_web": false,
+    "estilo": "web",
+    "estrutura": "plana",
+    "fernet": false,
+    "id_interno": false,
+    "id_publico": "inteiro",
+    "lnnl_tipo": "21",
+    "paleta": "P12",
+    "ratelimit": false,
+    "rbac": false,
+    "recuperacao_senha": false,
+    "redis": true,
+    "seguranca": "basica",
+    "tema": "T10",
+    "tinymce": false,
+    "tom": "escuro",
+    "two_factor": false,
+    "two_factor_expiracao": 10
+  }
+}

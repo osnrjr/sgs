@@ -1,0 +1,8 @@
+[
+  {
+    "classe": "Comanda",
+    "campo": "horario_pedido",
+    "acao": "novo",
+    "regra": "data-hora"
+  }
+]

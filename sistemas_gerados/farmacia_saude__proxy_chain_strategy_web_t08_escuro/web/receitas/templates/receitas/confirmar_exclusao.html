@@ -1,0 +1,14 @@
+{% extends "receitas/base.html" %}
+{% block title %}Excluir Receita — Farmácia Saúde{% endblock %}
+{% block page_title %}Excluir Receita{% endblock %}
+{% block content %}
+
+<div class="card"><div class="card-body">
+  <p>Excluir “{{ obj }}”? Esta ação não pode ser desfeita.</p>
+  <form method="post" class="d-flex gap-2">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a class="btn btn-outline-primary" href="{% url 'receitas:detalhe' obj.pk %}">Cancelar</a>
+  </form>
+</div></div>
+{% endblock %}

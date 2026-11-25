@@ -1,0 +1,14 @@
+[
+  {
+    "classe": "ParqueAerogerador",
+    "campo": "geoloc",
+    "acao": "novo",
+    "regra": "geolocalizacao"
+  },
+  {
+    "classe": "ParqueAerogerador",
+    "campo": "parametros_json",
+    "acao": "novo",
+    "regra": "json"
+  }
+]

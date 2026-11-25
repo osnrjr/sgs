@@ -1,0 +1,8 @@
+[
+  {
+    "classe": "Emprestimo",
+    "campo": "data_devolucao",
+    "acao": "novo",
+    "regra": "data-hora"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "classe": "Contrato",
+    "campo": "descricao_completa",
+    "acao": "novo",
+    "regra": "texto-longo"
+  },
+  {
+    "classe": "Contrato",
+    "campo": "foto_capa",
+    "acao": "novo",
+    "regra": "imagem"
+  }
+]

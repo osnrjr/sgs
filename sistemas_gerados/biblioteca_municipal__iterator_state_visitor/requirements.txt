@@ -1,0 +1,14 @@
+# =============================================================================
+# requirements.txt — sistema "Biblioteca Municipal" (gerado pelo SGS)
+#
+# Python: 3.12 ou mais novo (o núcleo conta com o sum() exato do 3.12+).
+#         Confira: python3 --version
+#
+# Instalar: python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+# =============================================================================
+
+# --- testes ---
+pytest>=8.0  # os testes do núcleo
+
+# --- deste sistema ---
+# (nenhuma a mais: além dos testes, só a biblioteca padrão do Python)

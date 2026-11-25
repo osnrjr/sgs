@@ -1,0 +1,192 @@
+{
+  "atributos": [
+    {
+      "max": null,
+      "min": null,
+      "nome": "paciente",
+      "regra": "obrigatorio",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": 1,
+      "nome": "sala",
+      "regra": "minimo",
+      "tipo": "int"
+    },
+    {
+      "max": 12,
+      "min": 1,
+      "nome": "sessoes",
+      "regra": "faixa",
+      "tipo": "int"
+    },
+    {
+      "max": null,
+      "min": 0,
+      "nome": "valor_sessao",
+      "regra": "minimo",
+      "tipo": "float"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "cpf_paciente",
+      "padrao": "123.456.789-09",
+      "regra": "cpf",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "telefone_contato",
+      "padrao": "(11) 99999-1111",
+      "regra": "telefone",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "anotacao",
+      "regra": "livre",
+      "tipo": "str"
+    }
+  ],
+  "categorias": {
+    "base": [
+      "ClinicoGeral",
+      "Clínico geral",
+      150.0
+    ],
+    "nova": [
+      "Dermatologia",
+      "Dermatologia",
+      250.0
+    ],
+    "subtipos": [
+      [
+        "Cardiologia",
+        "Cardiologia",
+        300.0
+      ],
+      [
+        "Pediatria",
+        "Pediatria",
+        200.0
+      ]
+    ],
+    "unidade": "sessão"
+  },
+  "comentarios": true,
+  "django": true,
+  "entidade": "Consulta",
+  "estudo": true,
+  "extras": {
+    "fixos": [
+      [
+        "Laudo",
+        40.0,
+        "laudo"
+      ],
+      [
+        "Exame",
+        90.0,
+        "exame"
+      ],
+      [
+        "Prioridade",
+        30.0,
+        "atendimento prioritário"
+      ]
+    ],
+    "percentual": [
+      "Urgencia",
+      1.5,
+      "+50% urgência"
+    ]
+  },
+  "gateway": "SaudePag",
+  "ident": "paciente",
+  "nomes": [
+    "Sérgio",
+    "Tatiana",
+    "Ulisses",
+    "Vanessa"
+  ],
+  "padroes": [
+    "encapsulamento",
+    "service",
+    "observer",
+    "strategy"
+  ],
+  "painel": {
+    "acao_livre": "Agendar",
+    "acao_ocupado": "(ocupado)",
+    "contagem": "horário(s) livre(s)",
+    "livre": "livre",
+    "ocupado": "OCUPADO",
+    "titulo": "Horário",
+    "zero": "AGENDA CHEIA - nenhum horário livre"
+  },
+  "preco": "valor_sessao",
+  "precos_exemplo": [
+    150.0,
+    300.0,
+    99.9,
+    0.0
+  ],
+  "quantidade": "sessoes",
+  "recurso": "horário",
+  "recursos": [
+    8,
+    9,
+    10
+  ],
+  "sistema": "Clínica Vida",
+  "unidade": "sessão(ões)",
+  "variantes": {
+    "conceito": "tipo de convênio",
+    "itens": [
+      [
+        "Particular",
+        1.0
+      ],
+      [
+        "ConvenioOuro",
+        0.6
+      ],
+      [
+        "ConvenioPrata",
+        0.75
+      ]
+    ],
+    "nova": [
+      "Empresa",
+      0.5
+    ]
+  },
+  "web": {
+    "antibot": false,
+    "anymail": false,
+    "argon2": false,
+    "banco": "sqlite3",
+    "comentarios_web": false,
+    "estilo": "web",
+    "estrutura": "plana",
+    "fernet": true,
+    "id_interno": false,
+    "id_publico": "uuid",
+    "lnnl_tipo": "21",
+    "paleta": "P02",
+    "ratelimit": false,
+    "rbac": false,
+    "recuperacao_senha": false,
+    "redis": false,
+    "seguranca": "baseline",
+    "tema": "T07",
+    "tinymce": false,
+    "tom": "escuro",
+    "two_factor": false,
+    "two_factor_expiracao": 10
+  }
+}

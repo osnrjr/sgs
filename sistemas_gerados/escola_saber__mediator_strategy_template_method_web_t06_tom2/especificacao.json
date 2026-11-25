@@ -1,0 +1,192 @@
+{
+  "atributos": [
+    {
+      "max": null,
+      "min": null,
+      "nome": "aluno",
+      "regra": "obrigatorio",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": 1,
+      "nome": "sala",
+      "regra": "minimo",
+      "tipo": "int"
+    },
+    {
+      "max": 12,
+      "min": 1,
+      "nome": "meses",
+      "regra": "faixa",
+      "tipo": "int"
+    },
+    {
+      "max": null,
+      "min": 0,
+      "nome": "mensalidade",
+      "regra": "minimo",
+      "tipo": "float"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "portal_url",
+      "padrao": "https://exemplo.com.br/item-1",
+      "regra": "url",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "comprovante",
+      "padrao": "documentos/anexo_1.pdf",
+      "regra": "arquivo",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "observacao",
+      "regra": "livre",
+      "tipo": "str"
+    }
+  ],
+  "categorias": {
+    "base": [
+      "Fundamental1",
+      "Fundamental I",
+      850.0
+    ],
+    "nova": [
+      "EducacaoInfantil",
+      "Educação infantil",
+      700.0
+    ],
+    "subtipos": [
+      [
+        "Fundamental2",
+        "Fundamental II",
+        950.0
+      ],
+      [
+        "EnsinoMedio",
+        "Ensino médio",
+        1200.0
+      ]
+    ],
+    "unidade": "mês"
+  },
+  "comentarios": true,
+  "django": true,
+  "entidade": "Turma",
+  "estudo": true,
+  "extras": {
+    "fixos": [
+      [
+        "MaterialEscolar",
+        180.0,
+        "material escolar"
+      ],
+      [
+        "Uniforme",
+        150.0,
+        "uniforme"
+      ],
+      [
+        "TransporteEscolar",
+        220.0,
+        "transporte escolar"
+      ]
+    ],
+    "percentual": [
+      "Antecipado",
+      0.95,
+      "-5% pagamento antecipado"
+    ]
+  },
+  "gateway": "PagaEscola",
+  "ident": "aluno",
+  "nomes": [
+    "Márcio",
+    "Natália",
+    "Otávio",
+    "Priscila"
+  ],
+  "padroes": [
+    "encapsulamento",
+    "mediator",
+    "strategy",
+    "template_method"
+  ],
+  "painel": {
+    "acao_livre": "Matricular",
+    "acao_ocupado": "(lista de espera)",
+    "contagem": "sala(s) com vaga",
+    "livre": "com vagas",
+    "ocupado": "LOTADA",
+    "titulo": "Sala",
+    "zero": "SEM VAGAS - nenhuma sala com vaga"
+  },
+  "preco": "mensalidade",
+  "precos_exemplo": [
+    850.0,
+    600.0,
+    1200.0,
+    0.0
+  ],
+  "quantidade": "meses",
+  "recurso": "sala",
+  "recursos": [
+    1,
+    2,
+    3
+  ],
+  "sistema": "Escola Saber",
+  "unidade": "mês(es)",
+  "variantes": {
+    "conceito": "tipo de bolsa",
+    "itens": [
+      [
+        "Regular",
+        1.0
+      ],
+      [
+        "Irmãos",
+        0.9
+      ],
+      [
+        "Bolsista",
+        0.5
+      ]
+    ],
+    "nova": [
+      "Filho de Professor",
+      0.4
+    ]
+  },
+  "web": {
+    "antibot": true,
+    "anymail": false,
+    "argon2": true,
+    "banco": "sqlite3",
+    "comentarios_web": false,
+    "estilo": "web",
+    "estrutura": "plana",
+    "fernet": false,
+    "id_interno": false,
+    "id_publico": "inteiro",
+    "lnnl_tipo": "21",
+    "paleta": "P02",
+    "ratelimit": false,
+    "rbac": false,
+    "recuperacao_senha": false,
+    "redis": false,
+    "seguranca": "basica",
+    "tema": "T06",
+    "tinymce": false,
+    "tom": "tom2",
+    "two_factor": true,
+    "two_factor_expiracao": 15
+  }
+}

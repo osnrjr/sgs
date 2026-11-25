@@ -1,0 +1,14 @@
+[
+  {
+    "classe": "Frete",
+    "campo": "coordenadas",
+    "acao": "novo",
+    "regra": "geolocalizacao"
+  },
+  {
+    "classe": "Frete",
+    "campo": "etiquetas",
+    "acao": "novo",
+    "regra": "multipla:fragil,urgente,refrigerado"
+  }
+]

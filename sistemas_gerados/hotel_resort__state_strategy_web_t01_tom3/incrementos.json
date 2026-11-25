@@ -1,0 +1,14 @@
+[
+  {
+    "classe": "Reserva",
+    "campo": "agendado_em",
+    "acao": "novo",
+    "regra": "data-hora"
+  },
+  {
+    "classe": "Reserva",
+    "campo": "email_hospede",
+    "acao": "novo",
+    "regra": "email"
+  }
+]

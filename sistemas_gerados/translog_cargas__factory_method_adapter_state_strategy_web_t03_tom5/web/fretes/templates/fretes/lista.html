@@ -1,0 +1,24 @@
+{% extends "fretes/base.html" %}
+{% block toolbar_actions %}<p class="d-flex gap-2 my-3"><a class="btn btn-primary" href="{% url 'fretes:criar' %}">Cadastrar Frete</a> <a class="btn btn-outline-primary" href="{% url 'fretes:api' %}">API (JSON)</a></p>{% endblock %}
+{% block content %}
+
+<div class="card">
+  <div class="table-responsive">
+    <table class="table table-hover align-middle mb-0">
+      <thead><tr><th>ID interno</th><th>Registro</th><th>Tipo de cliente</th><th class="text-end">Valor</th><th></th><th></th></tr></thead>
+      <tbody>
+      {% for item in painel.itens %}
+        <tr><td><code>{{ item.codigo }}</code></td><td><a href="{% url 'fretes:detalhe' item.id %}">{{ item.titulo }}</a></td><td>{{ item.tipo_label }}</td>
+          <td class="text-end">{{ item.valor_formatado }}</td>
+          <td><span class="badge badge-destaque">{{ item.selo }}</span></td>
+          <td class="text-end text-nowrap">
+            <a class="btn btn-sm btn-outline-primary" href="{% url 'fretes:editar' item.id %}">Editar</a>
+            <a class="btn btn-sm btn-outline-danger" href="{% url 'fretes:excluir' item.id %}">Excluir</a>
+          </td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer text-body-secondary small">{{ painel.rodape }}</div>
+</div>
+{% endblock %}

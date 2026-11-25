@@ -1,0 +1,15 @@
+{
+  "proximo": 11,
+  "sistemas": {
+    "hotel_resort__state_strategy_web_t01_tom3": 1,
+    "clinica_vida__service_observer_strategy_web_t07_escuro": 2,
+    "loja_virtual__decorator_facade_strategy_web_t02_tom4": 3,
+    "translog_cargas__factory_method_adapter_state_strategy_web_t03_tom5": 4,
+    "imobiliaria_lar__builder_composite_strategy_web_t05_claro": 5,
+    "escola_saber__mediator_strategy_template_method_web_t06_tom2": 6,
+    "farmacia_saude__proxy_chain_strategy_web_t08_escuro": 7,
+    "restaurante_sabor__polimorfismo_service_decorator_strategy_web_t04_tom3": 8,
+    "vento_sul_energia_eolica__command_memento_observer_strategy_web_t10_escuro": 9,
+    "biblioteca_municipal__iterator_state_visitor": 10
+  }
+}

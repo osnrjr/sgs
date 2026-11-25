@@ -1,0 +1,14 @@
+[
+  {
+    "classe": "Pedido",
+    "campo": "frete",
+    "acao": "novo",
+    "regra": "moeda"
+  },
+  {
+    "classe": "Pedido",
+    "campo": "cep_entrega",
+    "acao": "novo",
+    "regra": "cep"
+  }
+]

@@ -1,0 +1,36 @@
+{% load static %}<!doctype html>
+<html lang="pt-br" data-bs-theme="light" data-raio="pilula" data-sombra="suave" data-movimento="discreto" data-tipografia="arredondada" data-acessivel="nao">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#B45309">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="{% static 'contratos/icone-192.png' %}">
+  <link rel="stylesheet" href="{% static 'contratos/vendor/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'contratos/css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'contratos/css/tema.css' %}">
+  <title>{% block title %}Imobiliária Lar{% endblock %}</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand navbar-sgs">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'contratos:lista' %}">Imobiliária Lar</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="{% url 'contratos:lista' %}">Lista</a>
+        <a class="nav-link" href="{% url 'contratos:criar' %}">Cadastrar</a>
+        <a class="nav-link" href="{% url 'contratos:api' %}">API</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container py-4">
+    <h1 class="h3 mb-1">{% block page_title %}Imobiliária Lar{% endblock %}</h1>
+    {% block page_subtitle %}{% endblock %}
+
+    {% block toolbar_actions %}{% endblock %}
+    {% block content %}{% endblock %}
+  </main>
+  <script src="{% static 'contratos/vendor/bootstrap/bootstrap.bundle.min.js' %}" defer></script>
+  <script src="{% static 'contratos/js/app.js' %}" defer></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

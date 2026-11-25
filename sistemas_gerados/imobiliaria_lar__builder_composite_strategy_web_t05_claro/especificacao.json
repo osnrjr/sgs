@@ -1,0 +1,192 @@
+{
+  "atributos": [
+    {
+      "max": null,
+      "min": null,
+      "nome": "locatario",
+      "regra": "obrigatorio",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": 1,
+      "nome": "imovel",
+      "regra": "minimo",
+      "tipo": "int"
+    },
+    {
+      "max": 36,
+      "min": 1,
+      "nome": "meses",
+      "regra": "faixa",
+      "tipo": "int"
+    },
+    {
+      "max": null,
+      "min": 0,
+      "nome": "valor_aluguel",
+      "regra": "minimo",
+      "tipo": "float"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "descricao_completa",
+      "padrao": "",
+      "regra": "texto_longo",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "foto_capa",
+      "padrao": "imagens/foto_1.png",
+      "regra": "imagem",
+      "tipo": "str"
+    },
+    {
+      "max": null,
+      "min": null,
+      "nome": "observacao",
+      "regra": "livre",
+      "tipo": "str"
+    }
+  ],
+  "categorias": {
+    "base": [
+      "Apartamento",
+      "Apartamento",
+      1800.0
+    ],
+    "nova": [
+      "Kitnet",
+      "Kitnet",
+      1100.0
+    ],
+    "subtipos": [
+      [
+        "Casa",
+        "Casa",
+        2200.0
+      ],
+      [
+        "SalaComercial",
+        "Sala comercial",
+        2500.0
+      ]
+    ],
+    "unidade": "mês"
+  },
+  "comentarios": true,
+  "django": true,
+  "entidade": "Contrato",
+  "estudo": true,
+  "extras": {
+    "fixos": [
+      [
+        "Vistoria",
+        250.0,
+        "vistoria"
+      ],
+      [
+        "SeguroIncendio",
+        45.0,
+        "seguro incêndio"
+      ],
+      [
+        "TaxaContrato",
+        400.0,
+        "taxa de contrato"
+      ]
+    ],
+    "percentual": [
+      "ReajusteIgpm",
+      1.06,
+      "+6% reajuste IGP-M"
+    ]
+  },
+  "gateway": "PagaLar",
+  "ident": "locatario",
+  "nomes": [
+    "Danilo",
+    "Érica",
+    "Felipe",
+    "Giovana"
+  ],
+  "padroes": [
+    "encapsulamento",
+    "builder",
+    "composite",
+    "strategy"
+  ],
+  "painel": {
+    "acao_livre": "Visitar",
+    "acao_ocupado": "(alugado)",
+    "contagem": "imóvel(is) disponível(is)",
+    "livre": "disponível",
+    "ocupado": "ALUGADO",
+    "titulo": "Imóvel",
+    "zero": "SEM IMÓVEIS - nenhum imóvel disponível"
+  },
+  "preco": "valor_aluguel",
+  "precos_exemplo": [
+    1800.0,
+    1200.0,
+    3500.0,
+    0.0
+  ],
+  "quantidade": "meses",
+  "recurso": "imóvel",
+  "recursos": [
+    11,
+    12,
+    13
+  ],
+  "sistema": "Imobiliária Lar",
+  "unidade": "mês(es)",
+  "variantes": {
+    "conceito": "tipo de cliente",
+    "itens": [
+      [
+        "Residencial",
+        1.0
+      ],
+      [
+        "Comercial",
+        1.2
+      ],
+      [
+        "Estudante",
+        0.9
+      ]
+    ],
+    "nova": [
+      "Corporativo",
+      1.1
+    ]
+  },
+  "web": {
+    "antibot": false,
+    "anymail": true,
+    "argon2": false,
+    "banco": "sqlite3",
+    "comentarios_web": false,
+    "estilo": "web",
+    "estrutura": "plana",
+    "fernet": false,
+    "id_interno": false,
+    "id_publico": "inteiro",
+    "lnnl_tipo": "21",
+    "paleta": "P02",
+    "ratelimit": false,
+    "rbac": false,
+    "recuperacao_senha": true,
+    "redis": false,
+    "seguranca": "basica",
+    "tema": "T05",
+    "tinymce": true,
+    "tom": "claro",
+    "two_factor": false,
+    "two_factor_expiracao": 10
+  }
+}

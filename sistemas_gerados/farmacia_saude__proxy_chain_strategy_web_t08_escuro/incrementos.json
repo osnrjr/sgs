@@ -1,0 +1,14 @@
+[
+  {
+    "classe": "Receita",
+    "campo": "cnpj_fornecedor",
+    "acao": "novo",
+    "regra": "cnpj"
+  },
+  {
+    "classe": "Receita",
+    "campo": "metadados",
+    "acao": "novo",
+    "regra": "json"
+  }
+]

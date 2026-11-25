@@ -1,0 +1,14 @@
+{% extends "comandas/base.html" %}
+{% block title %}Excluir Comanda — Restaurante Sabor{% endblock %}
+{% block page_title %}Excluir Comanda{% endblock %}
+{% block content %}
+
+<div class="card"><div class="card-body">
+  <p>Excluir “{{ obj }}”? Esta ação não pode ser desfeita.</p>
+  <form method="post" class="d-flex gap-2">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a class="btn btn-outline-primary" href="{% url 'comandas:detalhe' obj.pk %}">Cancelar</a>
+  </form>
+</div></div>
+{% endblock %}
