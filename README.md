@@ -11,32 +11,137 @@ Cada sistema gerado nasce pronto para rodar, com testes `pytest`, camada de dom�
 ### Pré-requisitos
 - **Python 3.12+** (recomendado 3.12, 3.13 ou 3.14)
 - `git` e `pip`
+- *(Ubuntu/WSL, se necessário)* `sudo apt update && sudo apt install -y python3-venv`
 
-### Linux / macOS / WSL
+---
+
+### Opção 1 — Atalho em 1 comando (automático)
+
+Clona, cria o `.venv`, instala o `requirements.txt` e sobe o servidor em `http://127.0.0.1:6100/` (abrindo no **WYSIWYG**; o modo **CMD** fica em `/cmd` e no alternador fixo à esquerda).
+
+**Linux / macOS / WSL:**
 ```bash
+git clone https://github.com/osnrjr/sgs.git
+cd sgs
 bash iniciar.sh
 ```
-Cria `.venv`, instala `requirements.txt` e sobe o SGS em `http://127.0.0.1:6100/` (abrindo direto no **WYSIWYG**; o modo **CMD** fica em `/cmd` e no alternador fixo à esquerda).
 
-Outros comandos do `iniciar.sh`:
+Outros atalhos do `iniciar.sh`:
 ```bash
+bash iniciar.sh venv                # cria somente o .venv
+bash iniciar.sh deps                # instala/atualiza o requirements.txt no .venv
 bash iniciar.sh preparar            # prepara .venv e dependências sem subir o servidor
-source iniciar.sh ativar            # ativa o .venv no terminal atual
+source iniciar.sh ativar            # prepara (se precisar) e ATIVA o .venv no terminal atual
 bash iniciar.sh rodar 6150          # sobe o SGS em outra porta
-bash iniciar.sh sistema <pasta>     # prepara e sobe um sistema de sistemas_gerados/
+bash iniciar.sh sistema <pasta>     # prepara (.env, migrations, admin) e sobe um sistema de sistemas_gerados/
 bash iniciar.sh testar              # executa a suíte pytest do SGS
 ```
 
-### Windows (cmd / PowerShell)
+**Windows (cmd / PowerShell):**
 ```bat
+git clone https://github.com/osnrjr/sgs.git
+cd sgs
 iniciar.bat
 ```
-Suporta os mesmos subcomandos: `iniciar.bat preparar`, `iniciar.bat ativar`, `iniciar.bat rodar 6150`, `iniciar.bat sistema <pasta>` e `iniciar.bat testar`.
 
-### Execução manual (com `.venv` ativo)
+Outros atalhos do `iniciar.bat`:
+```bat
+iniciar.bat venv                    :: cria somente o .venv
+iniciar.bat deps                    :: instala/atualiza o requirements.txt no .venv
+iniciar.bat preparar                :: prepara .venv e dependências sem subir o servidor
+iniciar.bat ativar                  :: prepara (se precisar) e ATIVA o .venv no cmd atual
+iniciar.bat rodar 6150              :: sobe o SGS em outra porta
+iniciar.bat sistema <pasta>         :: prepara (.env, migrations, admin) e sobe um sistema de sistemas_gerados\
+iniciar.bat testar                  :: executa a suíte pytest do SGS
+```
+
+---
+
+### Opção 2 — Passo a passo manual (`.venv` → `requirements.txt` → `runserver`)
+
+**Linux / macOS / WSL:**
 ```bash
+# 1. Clonar e entrar na pasta do projeto
+git clone https://github.com/osnrjr/sgs.git
+cd sgs
+
+# 2. Criar o ambiente virtual (.venv)
+python3 -m venv .venv
+
+# 3. Ativar o ambiente virtual
+source .venv/bin/activate
+
+# 4. Atualizar o pip e instalar as dependências
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+# 5. Subir o servidor do SGS (porta 6100)
 python manage.py runserver 127.0.0.1:6100
 ```
+
+**Windows (PowerShell):**
+```powershell
+# 1. Clonar e entrar na pasta do projeto
+git clone https://github.com/osnrjr/sgs.git
+cd sgs
+
+# 2. Criar o ambiente virtual (.venv)
+py -3 -m venv .venv
+
+# 3. Ativar o ambiente virtual
+.\.venv\Scripts\Activate.ps1
+
+# 4. Atualizar o pip e instalar as dependências
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+# 5. Subir o servidor do SGS (porta 6100)
+python manage.py runserver 127.0.0.1:6100
+```
+
+> Se o PowerShell bloquear a execução de scripts (`ExecutionPolicy`), use `iniciar.bat` ou o **cmd** abaixo.
+
+**Windows (Prompt de Comando — cmd):**
+```bat
+git clone https://github.com/osnrjr/sgs.git
+cd sgs
+py -3 -m venv .venv
+.venv\Scripts\activate.bat
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+python manage.py runserver 127.0.0.1:6100
+```
+
+> **Alternativa sem Django** (servidor HTTP embutido do Python na mesma porta 6100):
+> `python tela_prompt.py`
+>
+> **Para desativar o `.venv`** ao encerrar:
+> `deactivate`
+
+---
+
+### Subir manualmente um sistema gerado (`sistemas_gerados/`)
+
+Com o `.venv` ativado, entre na pasta `web/` do sistema desejado, crie o `.env`, aplique as migrações e rode o `runserver`:
+
+```bash
+cd sistemas_gerados/hotel_resort__state_strategy_web_t01_tom3/web
+
+# 1. Criar o .env local a partir do modelo (no Windows cmd: copy .env.example .env)
+cp .env.example .env
+
+# 2. Gerar e aplicar as migrações do banco
+python manage.py makemigrations
+python manage.py migrate
+
+# 3. Criar superusuário padrão para o /admin/ (opcional)
+python manage.py garantir_admin
+
+# 4. Subir o sistema gerado
+python manage.py runserver 127.0.0.1:8000
+```
+
+*(Ou, sem fazer os 4 passos acima manualmente, basta rodar `bash iniciar.sh sistema <pasta>` no Linux/WSL ou `iniciar.bat sistema <pasta>` no Windows.)*
 
 ---
 
