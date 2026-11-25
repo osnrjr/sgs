@@ -6,6 +6,16 @@ Cada sistema gerado nasce pronto para rodar, com testes `pytest`, camada de dom�
 
 ---
 
+## Visão geral das interfaces
+
+### Modo WYSIWYG — Bancada visual em 5 colunas (`/`)
+![Interface WYSIWYG do SGS em 5 colunas](docs/img/sgs-wysiwyg.jpg)
+
+### Modo CMD — Terminal web interativo (`/cmd`)
+![Interface CMD do SGS](docs/img/sgs-cmd.png)
+
+---
+
 ## Início rápido
 
 ### Pré-requisitos
@@ -236,6 +246,7 @@ Ou pelo próprio SGS (no WYSIWYG clicando no chip do projeto, ou no CMD com `sgs
 ├── tipos_campos.py               # Inferência e validação dos 25 tipos de campo
 ├── temas_web.py / temas/         # 10 temas × 6 tons + 20 paletas do T10
 ├── sgs_web/                      # Aplicação Django que hospeda o SGS
+├── docs/img/                     # Imagens de apresentação (WYSIWYG e CMD)
 ├── referencias/                  # Cópias estáticas de estudo (Wikipédia GoF e Django Study Hub)
 ├── sistemas_gerados/             # 10 sistemas de exemplo (01 a 10) + .sgs_registro.json
 └── tests/                        # Suíte pytest do gerador e da interface (WYSIWYG + CMD)
